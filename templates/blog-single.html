@@ -70,33 +70,31 @@
                             </ul>
 
                         </div>
-                        <div class="comment-form-wrap pt-5">
+                        <div class="comment-form-wrap pt-5"     >
                             <h3 class="mb-5">Leave a comment</h3>
-                            <form action="#" class="p-5 comment-form">
+                            <form method="post" action="#" class="p-5 comment-form">
+                                {% csrf_token %}
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="name">Name *</label>
-                                            <input type="text" class="form-control" id="name">
+                                            <label for="full_name">Full Name *</label>
+<!--                                            <input type="text" class="form-control" id="name">-->
+                                            {{ comment.full_name }}
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="email">Email *</label>
-                                            <input type="email" class="form-control" id="email">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="website">Website</label>
-                                            <input type="url" class="form-control" id="website">
+<!--                                            <input type="email" class="form-control" id="email">-->
+                                            {{ comment.email }}
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="message">Message</label>
-                                            <textarea name id="message" cols="30" rows="10"
-                                                      class="form-control"></textarea>
+<!--                                            <textarea name id="message" cols="30" rows="10"-->
+<!--                                                      class="form-control"></textarea>-->
+                                            {{ comment.message }}
                                         </div>
                                     </div>
                                     <div class="col-md-12">
