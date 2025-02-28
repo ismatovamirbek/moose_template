@@ -1,4 +1,3 @@
-from django.contrib.gis.gdal.prototypes.srs import morph_to_esri
 from django.db import models
 
 

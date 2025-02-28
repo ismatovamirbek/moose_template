@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm,SubscriptionForm
-# Create your views here.
+
 
 
 def contact(request):
